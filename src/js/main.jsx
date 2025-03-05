@@ -11,9 +11,32 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Home />
-    
-  </React.StrictMode>,
-)
+const root = ReactDOM.createRoot(document.getElementById('root'));
+let counter = 0;
+
+
+setInterval(
+  () => {
+    counter++
+
+  
+    let hoursCounter = Math.floor(counter / 3600);
+    let minutesCounter = Math.floor((counter % 3600) / 60);
+    let secondsCounter = Math.floor(counter % 60 );
+
+    let hoursCounterStringBe = String(hoursCounter).padStart(2, "0");
+    let minutesCounterStringBe = String(minutesCounter).padStart(2, "0");
+    let secondsCounterStringBe = String(secondsCounter).padStart(2, "0");
+    let counterStringBeAnArray = [...hoursCounterStringBe, ...minutesCounterStringBe, ...secondsCounterStringBe];
+
+    root.render(
+      <React.StrictMode>
+        <Home digits={counterStringBeAnArray} />
+
+      </React.StrictMode >,
+    )
+
+
+  }, 1000
+);
+
