@@ -20,7 +20,7 @@ setInterval(
     counter++
 
   
-    let hoursCounter = Math.floor(counter / 3600);
+    let hoursCounter = Math.floor(counter / 3600) % 24;
     let minutesCounter = Math.floor((counter % 3600) / 60);
     let secondsCounter = Math.floor(counter % 60 );
 

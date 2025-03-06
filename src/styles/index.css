@@ -10,12 +10,16 @@
 
 */
 .space{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: black;
     height: 200px;
     width: 120px;
     color: white;
     border-radius: 10%;
     box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
+    font-size: 150px;
    }
 
 
@@ -34,3 +38,6 @@
     box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.5);
    
    }
+.colons{
+    font-size: 150px;
+}

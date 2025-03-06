@@ -13,19 +13,23 @@ const Home = ({ digits }) => {
 		<div className="container">
 			<div className="row d-flex justify-content-evenly ms-5 me-5 ">
 				{digits.map(
-					(digit, index) => (
-						<div key={index} className={`col-auto mt-4 mb-4 ${index === 0 ? "" : "space"}`}
-							id={index === 0 ? "space-clock" : undefined} >
-							{index === 0 ? (
-								<i className="fa-solid fa-clock fa-6x"></i>
-							) : (
-								<>
-									{digit}
-									{(index === 2 || index === 4) && " : "}
-								</>
-							)}
-						</div>
 
+					(digit, index) => (
+						<React.Fragment key={index}>
+							<div key={index} className={`col-auto mt-4 mb-4 ${index === 0 ? "" : "space"}`}
+								id={index === 0 ? "space-clock" : undefined} >
+								{index === 0 ? (
+									<i className="fa-solid fa-clock fa-6x"></i>
+								) : (
+									<>
+										{digit}
+
+									</>
+								)}
+							</div>
+							{(index === 1 || index === 3) &&
+							 (<div className="col-auto d-flex align-items-start fw-bold colons">:</div>)}
+						</React.Fragment>
 					)
 				)}
 			</div>
