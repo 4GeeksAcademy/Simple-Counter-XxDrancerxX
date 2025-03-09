@@ -11,6 +11,9 @@ import '../styles/index.css'
 // components
 import Home from './components/Home';
 
+
+// first solution:
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 let counter = 0;
 
@@ -32,11 +35,36 @@ setInterval(
     root.render(
       <React.StrictMode>
         <Home digits={counterStringBeAnArray} />
-
+        
+                        
       </React.StrictMode >,
     )
-
+   
 
   }, 1000
 );
 
+
+
+// second solution:
+
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// let counter = 0;
+
+// setInterval(function(){
+//   const fourthDigit = Math.floor(counter / 1000) % 10;
+//   const thirdDigit = Math.floor(counter / 100)  % 10;
+//   const secondDigit = Math.floor(counter / 10)  % 10;
+//   const firstDigit = Math.floor(counter / 1)  % 10;
+//   counter++;
+//  console.log(counter);
+ 
+
+//   root.render(
+//     <Home firstDigit={firstDigit}   
+//     secondDigit={secondDigit}
+//     thirdDigit={thirdDigit}
+//     fourthDigit={fourthDigit}/>
+
+// );
+// }, 1000);

@@ -3,11 +3,13 @@ import React from "react";
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/index.css";
+// import PropTypes from 'prop-types';(second solution)
 
 
 
-
+// First solution:
 //create your first component
+
 const Home = ({ digits }) => {
 	return (
 		<div className="container">
@@ -37,4 +39,28 @@ const Home = ({ digits }) => {
 	);
 };
 
+
 export default Home;
+
+//Second solution:
+// function Home(props) {
+// 	return (
+// 		<div className="container">
+// 			<div className="clock-icon"><i className="fa-solid fa-clock"></i></div>
+// 			<div className="fourth-digit">{props.fourthDigit}</div>
+// 			<div className="third-digit">{props.thirdDigit}</div>
+// 			<div className="second-digit">{props.secondDigit}</div>
+// 			<div className="first-digit">{props.firstDigit}</div>
+// 		</div>
+// 	)
+
+// };
+
+// Home.propTypes = {
+// 	fourthDigit: PropTypes.number,
+// 	thirdDigit: PropTypes.number,
+// 	secondDigit: PropTypes.number,
+// 	firstDigit: PropTypes.number
+// };
+
+// export default Home

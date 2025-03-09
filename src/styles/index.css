@@ -9,6 +9,7 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+/* First solution: */
 .space{
     display: flex;
     justify-content: space-between;
@@ -41,3 +42,19 @@
 .colons{
     font-size: 150px;
 }
+
+/* second solution */
+/* 
+.container div{
+    display: inline-block;
+    font-size: 60px;
+    line-height: normal;
+    background-color: #403939d2;
+    color: white;
+    padding: 10px;
+    margin: 3px;
+}
+.container{
+    background:black;
+    text-align: center;
+} */
